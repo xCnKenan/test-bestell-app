@@ -1,0 +1,48 @@
+.foodCard{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .foodCardBody{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .addToBasket{
+    display: flex;
+    align-items: start;
+  }
+  
+  
+  .addToBasket img{
+    height: 24px;
+    object-fit: cover;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-color: var(--bs-border-color-translucent);
+    
+  }
+  
+  .border{
+    border: 1px solid;
+    --bs-card-border-color: var(--bs-border-color-translucent);
+  }
+
+  .card{
+    --bs-card-border-color: white;
+  }
+
+  .informationDeliver{
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .bgInformationDeliver{
+    background-color: #ffe79a;
+    padding: 16px 14px 16px 14px;
+    border-radius: 16px;
+  }
+
+  

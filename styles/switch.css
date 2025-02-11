@@ -1,0 +1,79 @@
+
+
+.switch{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.switchContent{
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    background-color: #ececec;
+    border-radius: 40px;
+    gap: 4px;
+}
+
+.radius{
+    --bs-btn-border-radius: 40px;
+}
+
+.contentLogo{
+    height: 24px;
+    object-fit: contain;
+}
+
+.contentInfo{
+    display: flex;
+    align-items: center;
+    padding: 0px 32px 0px 32px;
+}
+
+.contentMainInfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+}
+
+.option1{
+    --bs-btn-bg: #ececec;
+    --bs-btn-border-color: #ececec;
+    --bs-btn-active-color: black;
+    --bs-btn-color: #424242;
+    --bs-btn-active-bg: white;
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0;
+    
+}
+
+.option1:hover{
+    --bs-btn-bg: #f1f1f1 !important;
+}
+
+.btn-check:checked+.btn{
+    border-color: white;
+    font-weight: 480;
+    box-shadow: var(--bs-box-shadow);
+}
+
+.option2{
+    --bs-btn-bg: #ececec;
+    --bs-btn-border-color: #ececec;
+    --bs-btn-active-color: black;
+    --bs-btn-color: #424242;
+    --bs-btn-active-bg: white;
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0;
+}
+
+.option2:hover{
+    --bs-btn-bg: #f1f1f1 !important;
+}
+
+.titleDeliverAndPickUp{
+    font-size: 14px;
+}
+
+.timeDeliverAndPickUp{
+    font-size: 12px;
+}

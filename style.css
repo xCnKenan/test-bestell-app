@@ -1,0 +1,179 @@
+.mainLogo {
+  height: 60px;
+  object-fit: cover;
+}
+
+.navbar {
+  background-color: var(--main);
+  box-shadow: var(--bs-box-shadow) !important;
+  z-index: 999;
+}
+
+.mainPicture {
+  object-position: center;
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.priceList {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  height: 86px;
+  background-color: var(--main);
+}
+
+.divide {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  border: 1px solid;
+  width: 100%;
+  color: var(--main);
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gap {
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.gap:hover {
+  background-color: var(--hover);
+  transition: all 250ms ease;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.picturePadding {
+  padding: 8px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.menuList {
+  margin-top: 8px;
+}
+
+.menuList span {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+tbody {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.chooseDishes {
+  margin-left: 8px;
+  margin-top: 4px;
+}
+
+.chooseDish {
+  margin-left: 8px;
+}
+
+.plus {
+  height: 20px;
+  object-fit: contain;
+}
+
+.plus:hover {
+  border: 1px solid;
+  color: var(--main);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.minus {
+  height: 20px;
+  object-fit: contain;
+}
+
+.minus:hover {
+  border: 1px solid;
+  color: var(--main);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.trash {
+  height: 20px;
+  object-fit: contain;
+  transition: all 250ms ease;
+}
+
+.trash:hover {
+  scale: 1.1;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.coloredPrice {
+  color: var(--main);
+  font-weight: bold;
+}
+
+.boldTitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dishDescription {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.boldTitleBasket {
+  font-weight: bold;
+}
+
+.costs {
+  color: grey;
+}
+
+.mydish {
+  font-weight: bold;
+  color: grey;
+  cursor: pointer;
+}
+
+.emptyBasket {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: start;
+  align-items: center;
+}
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bestell App</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="./styles/card.css" />
+    <link rel="stylesheet" href="./styles/switch.css">
+
+    <script src="./script.js"></script>
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/templates.js"></script>
+  </head>
+  <body onload="init()">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            class="mainLogo"
+            src="./assets/img/Logo.png"
+            alt="Logo"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="content">
+        <div class="dishes">
+          <img class="mainPicture" src="./assets/img/bowl.jpg" alt="" />
+          <div class="chooseDishes">
+            <span onclick="renderMainDishes()" class="mydish">Hauptgerichte</span>
+            <span onclick="renderSweetDishes()" class="mydish">Desserts</span>
+          </div>
+          <img
+            class="mainPicture picturePadding"
+            src="./assets/img/bowl-second.jpg"
+            alt=""
+          />
+          <div class="allDishes" id="allDishes">
+          </div>
+          <div>
+            <img class="mainPicture picturePadding" src="./assets/img/brownie.jpg"/>
+            <span onclick="renderSweetDishes()" class="chooseDish mydish">Desserts</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="shoppingCart">
+        <div class="basket shadow">
+          <div class="card rounded-0">
+            <div class="card-body">
+              <h1>Warenkorb</h1>
+            </div>
+          </div>
+
+          <!-- Switch Button for Deliver and  pickup-->
+           <div class="switch">
+            <div class="switchContent">
+          <input onclick="deliverButton(priceOfAllDishes)" type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+          <label class="btn btn-secondary radius option1" for="option1">
+            <div class="contentInfo">
+            <img class="contentLogo" src="./assets/img/deliver.png" alt="">
+                <div class="contentMainInfo">
+                  <span class="titleDeliverAndPickUp">Lieferung</span>
+                  <span class="timeDeliverAndPickUp">25-45 min</span>
+                </div>
+            </div>
+          </label>
+
+          <input onclick="pickUpButton(priceOfAllDishes)" type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+          <label class="btn btn-secondary radius option2" for="option2">
+            <div class="contentInfo">
+            <img class="contentLogo" src="./assets/img/pick-up.png" alt="">
+              <div class="contentMainInfo">
+                <span class="titleDeliverAndPickUp">Abholung</span>
+                <span class="timeDeliverAndPickUp">20 min</span>
+              </div>
+            </div>
+          </label>
+            </div>
+          </div>
+          <!--  -->
+
+
+          <section id="basketRefs">
+          <!-- Information Deliver -->
+
+          <div id="informationDeliver"></div>
+
+           <!-- Information Deliver -->
+
+          <div id="shoppingCart">
+            <!--hier kommen neue elemente rein--> 
+            <div id="removeInfo" id="" class="emptyBasket">
+            <img src="./assets/img/empty-basket.png" alt="">
+            <span>Warenkorb leer</span>
+            </div>
+          </div>
+
+          <div id="addFood"></div>
+
+          <div id="invoice"></div>
+        </section>
+
+        </div>
+      </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    
+  </body>
+</html>
