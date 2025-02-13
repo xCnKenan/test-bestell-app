@@ -67,6 +67,7 @@ function calculateInvoice() {
     for (let index = 0; index < basket.length; index++) {
       let result = basket[index];
       sumOfDishes = sumOfDishes + result.amount * result.price;
+      
     }
     priceOfAllDishes = sumOfDishes;
     getInvoiceTemplate(priceOfAllDishes);
@@ -146,35 +147,24 @@ function removeDishFromBasket(index) {
 
 
 //infoDeliver here
-function deliverButton(priceOfAllDishes, index) {
+function deliverButton(priceOfAllDishes) {
   delivery = true;
-  let newBasketRefs = document.getElementById("basketRefs");
-  newBasketRefs.innerHTML="";
-
   if (priceOfAllDishes == 0){
     getAgainDefaultBasketTemplate();
-  } else if (priceOfAllDishes > 0){
-   basketTemplate(index); 
+  } else if (delivery == true){
+    getTemplateOfDeliverCosts(priceOfAllDishes);
   }
-  
-
-  
   console.log(priceOfAllDishes); 
 }
 
 // infoDeliver here
-function pickUpButton(priceOfAllDishes, index){
+function pickUpButton(priceOfAllDishes){
   delivery = false;
-  let newBasketRefs = document.getElementById("basketRefs");
-  newBasketRefs.innerHTML="";
-
+  let infoRef = document.getElementById("informationDeliver");
   if(priceOfAllDishes == 0){
     getAgainDefaultBasketTemplate();
-  } else if (priceOfAllDishes > 0){
-    basketTemplate(index);
+  } else if (delivery == false){
+    infoRef.innerHTML = "";
   }
-  
-
-  
   console.log(priceOfAllDishes);  
 }

@@ -13,7 +13,7 @@ function getMainDishTemplate(index) {
 
 function basketTemplate(index) {
   let basketRef = document.getElementById("addFood");
-  basketRef.innerHTML ="";
+  // basketRef.innerHTML ="";
   basketRef.innerHTML += `<div class="menuList" id="foodField${index}">
             <span class="boldTitleBasket">${mainDishes[index].name}</span>
 
@@ -93,8 +93,13 @@ function getAllCostsTemplate(priceOfAllDishes) {
 function getTemplateOfDeliverCosts(priceOfAllDishes) {
   let deliverCostsRef = document.getElementById("informationDeliver");
   deliverCostsRef.innerHTML = '';
-  deliverCostsRef.innerHTML = `<div class="informationDeliver">
-                                  <div class="bgInformationDeliver">Noch <b>${(35 - priceOfAllDishes).toFixed(2)}€</b> bis der Mindestbestellwert erreicht ist
-                                  </div>
-                              </div>`;
+
+  if(priceOfAllDishes <= 0){
+    deliverCostsRef.innerHTML = '';
+  } else if (priceOfAllDishes <= 35) {
+    deliverCostsRef.innerHTML = `<div class="informationDeliver">
+    <div class="bgInformationDeliver">Noch <b>${(35 - priceOfAllDishes).toFixed(2)}€</b> bis der Mindestbestellwert erreicht ist
+    </div>
+    </div>`;
+  }
 }
